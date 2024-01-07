@@ -1,0 +1,6 @@
+name: site
+title: Site repository documentation
+version: ~
+start_page: index.adoc
+nav:
+- modules/ROOT/nav.adoc

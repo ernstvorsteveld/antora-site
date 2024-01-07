@@ -1,0 +1,30 @@
+site:
+  title: Demo Document site
+  url: http://localhost:8091
+  start_page: site::index.adoc
+content:
+  sources:
+  - url: git@github.com:ernstvorsteveld/antora-docs0.git
+    start_path: docs
+    name: docs0
+  - url: git@github.com:ernstvorsteveld/antora-docs1.git
+    start_path: docs
+    name: docs1
+  - url: git@github.com:ernstvorsteveld/antora-docs2.git
+    start_path: docs
+    name: docs2
+  - url: git@github.com:ernstvorsteveld/antora-site.git
+    start_path: docs
+    name: site
+asciidoc:
+  attributes:
+    experimental: ''
+    idprefix: ''
+    idseparator: '-'
+    page-pagination: ''
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+runtime:
+  cache_dir: ./.cache
