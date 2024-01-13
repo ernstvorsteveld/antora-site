@@ -24,8 +24,9 @@ RUN apk --no-cache add curl findutils jq \
 WORKDIR /antora
 
 COPY docker-entrypoint.sh /usr/local/bin/
-
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh 
+
+COPY ui-bundle.zip /antora
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 
