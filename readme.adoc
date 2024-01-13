@@ -6,4 +6,5 @@ docker run -u $(id -u) -v $PWD:/antora --rm -t antora antora-playbook.yml --stac
 
 docker run -u $(id -u) -v $PWD:/antora --rm -t antora antora-playbook.yml --stacktrace --fetch --ui-bundle-url /Users/ernstvorsteveld/git/antora/antora-ui-default
 
+python -m http.server 8080
 ----
