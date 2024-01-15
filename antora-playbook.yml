@@ -22,6 +22,9 @@ asciidoc:
     idprefix: ''
     idseparator: '-'
     page-pagination: ''
+    plantuml-server-url: http://www.plantuml.com/plantuml
+  extensions:
+  - asciidoctor-plantuml
 ui:
   bundle:
     url: ./ui-bundle.zip
