@@ -7,4 +7,11 @@ docker run -u $(id -u) -v $PWD:/antora --rm -t antora antora-playbook.yml --stac
 docker run -u $(id -u) -v $PWD:/antora --rm -t antora antora-playbook.yml --stacktrace --fetch --ui-bundle-url /Users/ernstvorsteveld/git/antora/antora-ui-default
 
 python -m http.server 8080
+
+docker build --tag 'antora-nginx' -f Dockerfile-nginx .
+docker build --tag 'antora' .
+
+docker run -p 8080:80 --rm -t antora-nginx 
+
+docker tag antora-nginx:latest ernstvorsteveld/antora-nginx:1.0
 ----
